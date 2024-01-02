@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Football Management</title>
-    <link rel="stylesheet" href="football.css">
-</head>
-<body>
-   <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ullam voluptatem, ad optio ducimus velit tempora, dignissimos dicta doloribus reiciendis minima, praesentium quasi! Delectus reiciendis error corrupti tempore eaque facere.</h1>
-    <srcipt scr="./football.js"></srcipt>
-</body>
+    <link rel="stylesheet" href="football.css" />
+  </head>
+  <body>
+    <div class="football-container">
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="modal-info">
+                <img src="./img/football.png" alt="Person Image">
+                <h2>Erling Haaland</h2>
+                <p>About : Norwegian striker, known for his speed and prolific goal-scoring.</p>
+                <p><b>Worth:</b> 150000000</p>
+                <p><b>Jersey-Number</b> 9</p>
+              </div>
+            </div>
+          </div>
+      <div class="container">
+        <div class="football-img">
+          <img src="./img/football.png" alt="" />
+        </div>
+        <div class="football-history">
+          <h1>
+            College Football <br />
+            Teams
+          </h1>
+          <p>
+            Live college football scores, schedules and rankings from the FBS,
+            searchable by conference.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            aliquam tenetur non tempore aliquid dicta eos quo corporis, at odio,
+            molestiae labore similique? Magni quasi culpa aperiam? Quo, possimus
+            doloribus.
+          </p>
+          <form>
+            <label>Search player by name</label>
+            <br />
+            <input type="text" />
+          </form>
+          <div class="indi-player">
+            <button id="indiPlayer">Search Player</button>
+          </div>
+        </div>
+      </div>
+    </div>
+ <script src="./football.js"></script>
+  </body>
 </html>

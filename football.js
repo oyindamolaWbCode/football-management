@@ -1,3 +1,8 @@
+
+let modal = document.getElementById("modal");
+let btn = document.getElementById("indiPlayer");
+var span = document.getElementsByClassName("close")[0];
+
 let players = [
     {
         name: "Lionel Messi",
@@ -147,5 +152,15 @@ let players = [
         age: 28
     }
 ];
+
+console.log(players)
+
+btn.addEventListener('click', () =>{
+    modal.style.display = "block";
+})
+
+span.addEventListener('click', () =>{
+      modal.style.display = "none";
+})
 
 
