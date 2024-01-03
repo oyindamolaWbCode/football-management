@@ -11,7 +11,7 @@ let playerImage = document.getElementById('playerImage')
 
 let players = [
     {
-      image: "./img/Kevin De Bruyne.jpg",
+      image: "./img/Kevin De Bruyne.jpeg",
       name: "Kevin De Bruyne",
       position: "Midfielder",
       about:
@@ -21,7 +21,7 @@ let players = [
       age: 31,
     },
     {
-        image: "./img/Ruben Dias.jpg",
+      image: "./img/Ruben Dias.jpg",
       name: "Ruben Dias",
       position: "Defender",
       about:
@@ -31,7 +31,7 @@ let players = [
       age: 25,
     },
     {
-        image: "./img/Phil Foden.jpg",
+        image: "./img/Phil Foden.jpeg",
       name: "Phil Foden",
       position: "Midfielder",
       about:
@@ -51,7 +51,7 @@ let players = [
       age: 31,
     },
     {
-        image: "./img/Ederson.jpg",
+        image: "./img/Ederson.jpeg",
       name: "Ederson",
       position: "Goalkeeper",
       about:
@@ -61,7 +61,7 @@ let players = [
       age: 28,
     },
     {
-        image: "./img/João Cancelo.jpg",
+        image: "./img/João Cancelo.jpeg",
       name: "João Cancelo",
       position: "Defender",
       about:
@@ -71,7 +71,7 @@ let players = [
       age: 27,
     },
     {
-        image: "./img/Bernardo Silva.jpg",
+        image: "./img/Bernardo Silva.jpeg",
       name: "Bernardo Silva",
       position: "Midfielder",
       about:
@@ -91,7 +91,7 @@ let players = [
       age: 24,
     },
     {
-        image: "./img/Rodri.jpg",
+        image: "./img/Rodri.jpeg",
       name: "Rodri",
       position: "Midfielder",
       about:
@@ -110,7 +110,7 @@ let players = [
       age: 21,
     },
     {
-        image: "./img/Nathan Aké.jpg",
+        image: "./img/Nathan Aké.jpeg",
       name: "Nathan Aké",
       position: "Defender",
       about:
@@ -189,7 +189,7 @@ let players = [
       age: 27,
     },
     {
-        image: "./img/Fernandinho.jpg",
+        image: "./img/Fernandinho.jpeg",
       name: "Fernandinho",
       position: "Midfielder",
       about:
@@ -199,7 +199,7 @@ let players = [
       age: 37,
     },
     {
-        image: "./img/Jack Grealish.jpg",
+        image: "./img/Jack Grealish.jpeg",
       name: "Jack Grealish",
       position: "Midfielder",
       about:
@@ -224,13 +224,14 @@ btn.addEventListener("click", () => {
         console.log(result)    
         if (result) {
             
-            playerName.textContent = result.name;
-            playerImage.textContent = result.image;
-            playerAbout.innerHTML = `<b>About:</b> ${result.about}`;
-            playerWorth.innerHTML = `<b>Worth:</b> ${result.worth}`;
-            playerNo.innerHTML = `<b>Jersey-Number:</b>  ${result.jerseyNumber}`;
-            playerPosition.innerHTML = `<b>Position:</b>${result.position}`;
+          playerName.textContent = result.name;
+          playerImage.src = result.image;
+          playerAbout.innerHTML = `<b>About:</b> ${result.about}`;
+          playerWorth.innerHTML = `<b>Worth:</b> ${result.worth}`;
+          playerNo.innerHTML = `<b>Jersey-Number:</b>  ${result.jerseyNumber}`;
+          playerPosition.innerHTML = `<b>Position:</b>${result.position}`;
         } else {
+            playerImage.style.display = 'none'
             playerName.textContent = 'Player not found'
             playerAbout.textContent = ""
             playerWorth.textContent = ""
