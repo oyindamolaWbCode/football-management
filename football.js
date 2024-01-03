@@ -7,9 +7,11 @@ let playerAbout = document.getElementById('playerAbout');
 let playerWorth = document.getElementById('playerWorth');
 let playerNo = document.getElementById('playerNo');
 let playerPosition = document.getElementById('position');
+let playerImage = document.getElementById('playerImage')
 
 let players = [
     {
+      image: "./img/Kevin De Bruyne.jpg",
       name: "Kevin De Bruyne",
       position: "Midfielder",
       about:
@@ -19,6 +21,7 @@ let players = [
       age: 31,
     },
     {
+        image: "./img/Ruben Dias.jpg",
       name: "Ruben Dias",
       position: "Defender",
       about:
@@ -28,6 +31,7 @@ let players = [
       age: 25,
     },
     {
+        image: "./img/Phil Foden.jpg",
       name: "Phil Foden",
       position: "Midfielder",
       about:
@@ -37,6 +41,7 @@ let players = [
       age: 21,
     },
     {
+        image: "./img/Riyad Mahrez.jpg",
       name: "Riyad Mahrez",
       position: "Forward",
       about:
@@ -46,6 +51,7 @@ let players = [
       age: 31,
     },
     {
+        image: "./img/Ederson.jpg",
       name: "Ederson",
       position: "Goalkeeper",
       about:
@@ -55,6 +61,7 @@ let players = [
       age: 28,
     },
     {
+        image: "./img/João Cancelo.jpg",
       name: "João Cancelo",
       position: "Defender",
       about:
@@ -64,6 +71,7 @@ let players = [
       age: 27,
     },
     {
+        image: "./img/Bernardo Silva.jpg",
       name: "Bernardo Silva",
       position: "Midfielder",
       about:
@@ -73,6 +81,7 @@ let players = [
       age: 27,
     },
     {
+        image: "./img/Gabriel Jesus.jpg",
       name: "Gabriel Jesus",
       position: "Forward",
       about:
@@ -82,6 +91,7 @@ let players = [
       age: 24,
     },
     {
+        image: "./img/Rodri.jpg",
       name: "Rodri",
       position: "Midfielder",
       about:
@@ -91,6 +101,7 @@ let players = [
       age: 25,
     },
     {
+        image: "./img/Ferran Torres.jpg",
       name: "Ferran Torres",
       position: "Forward",
       about: "Spanish forward, known for his pace and technical ability.",
@@ -99,6 +110,7 @@ let players = [
       age: 21,
     },
     {
+        image: "./img/Nathan Aké.jpg",
       name: "Nathan Aké",
       position: "Defender",
       about:
@@ -108,6 +120,7 @@ let players = [
       age: 26,
     },
     {
+        image: "./img/Kyle Walker.jpg",
       name: "Kyle Walker",
       position: "Defender",
       about:
@@ -117,6 +130,7 @@ let players = [
       age: 32,
     },
     {
+        image: "./img/Aymeric Laporte.jpg",
       name: "Aymeric Laporte",
       position: "Defender",
       about:
@@ -126,6 +140,7 @@ let players = [
       age: 28,
     },
     {
+        image: "./img/Raheem Sterling.jpg",
       name: "Raheem Sterling",
       position: "Forward",
       about:
@@ -135,6 +150,7 @@ let players = [
       age: 28,
     },
     {
+        image: "./img/Ilkay Gündogan.jpg",
       name: "Ilkay Gündogan",
       position: "Midfielder",
       about:
@@ -144,6 +160,7 @@ let players = [
       age: 31,
     },
     {
+        image: "./img/Zack Steffen.jpg",
       name: "Zack Steffen",
       position: "Goalkeeper",
       about: "American goalkeeper, known for his shot-stopping abilities.",
@@ -152,6 +169,7 @@ let players = [
       age: 26,
     },
     {
+        image: "./img/John Stones.jpg",
       name: "John Stones",
       position: "Defender",
       about:
@@ -161,6 +179,7 @@ let players = [
       age: 27,
     },
     {
+        image: "./img/Benjamin Mendy.jpg",
       name: "Benjamin Mendy",
       position: "Defender",
       about:
@@ -170,6 +189,7 @@ let players = [
       age: 27,
     },
     {
+        image: "./img/Fernandinho.jpg",
       name: "Fernandinho",
       position: "Midfielder",
       about:
@@ -179,6 +199,7 @@ let players = [
       age: 37,
     },
     {
+        image: "./img/Jack Grealish.jpg",
       name: "Jack Grealish",
       position: "Midfielder",
       about:
@@ -197,11 +218,14 @@ btn.addEventListener("click", () => {
         alert('Input required!')
     }else{
         let result = players.find((player) =>
-        player.name.toLowerCase().includes(input.trim().toLowerCase())
+        player.name.toLowerCase().includes(input.trim().toLowerCase()) || 
+        player.jerseyNumber.toString().toLowerCase().includes(input)   
         )
         console.log(result)    
         if (result) {
+            
             playerName.textContent = result.name;
+            playerImage.textContent = result.image;
             playerAbout.innerHTML = `<b>About:</b> ${result.about}`;
             playerWorth.innerHTML = `<b>Worth:</b> ${result.worth}`;
             playerNo.innerHTML = `<b>Jersey-Number:</b>  ${result.jerseyNumber}`;
